@@ -68,7 +68,7 @@ history = model.fit(
 )
 ```
 
-![](img\resnet-history1.png)
+![](img/resnet-history1.png)
 |    |   accuracy |      loss |   val_accuracy |   val_loss |
 |---:|-----------:|----------:|---------------:|-----------:|
 |  0 |   0.805066 | 0.4268    |       0.855556 |   0.322229 |
@@ -94,7 +94,7 @@ Acurácia no conjunto de teste: $64.57\%$
 
 **Gradcam:**
 
-![](img\resnet-gradcam1.png)
+![](img/resnet-gradcam1.png)
 
 ---
 
@@ -172,7 +172,7 @@ lr_scheduler = ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=3, ver
 history = model.fit(train_ds, validation_data=val_ds, epochs=15, callbacks=[lr_scheduler])
 ```
 
-![](img\resnet_history-2.png)
+![](img/resnet_history-2.png)
 |    |   accuracy |     loss |   val_accuracy |   val_loss |   learning_rate |
 |---:|-----------:|---------:|---------------:|-----------:|----------------:|
 |  0 |   0.786344 | 7.66283  |       0.883333 |   6.52977  |          0.0001 |
@@ -204,7 +204,7 @@ Acurácia no conjunto de teste com regularização e sem fine-tuning: $62.29\%$
 
 **GradCam:**
 
-![](img\resnet-gradcam-no_fn.png)
+![](img/resnet-gradcam-no_fn.png)
 
 ---
 
@@ -253,7 +253,7 @@ model_finetuning.compile(optimizer=Adam(learning_rate=0.00001), loss="sparse_cat
 history_finetune = model_finetuning.fit(train_ds, validation_data=val_ds, epochs=10, callbacks=[lr_scheduler])
 ```
 
-![](img\resnet50-history-finetuning.png)
+![](img/resnet50-history-finetuning.png)
 |    |   accuracy |     loss |   val_accuracy |   val_loss |   learning_rate |
 |---:|-----------:|---------:|---------------:|-----------:|----------------:|
 |  0 |   0.997797 | 0.388907 |       0.938889 |   0.643104 |           1e-05 |
@@ -280,5 +280,5 @@ Acurácia no conjunto de teste com Fine-Tuning: $72.57\%$
 
 **GradCam:**
 
-![](img\resnet-gradcam-fn.png)
+![](img/resnet-gradcam-fn.png)
 
